@@ -99,6 +99,7 @@ const GlobalStyle = createGlobalStyle`
         --white: hsl(0, 100%, 100%);
         --desktop-bg: url("bg-desktop-light.jpg");
         --mobile-bg: url("bg-mobile-light.jpg");
+        --theme-toggle-icon: url("icon-moon.svg");
       }
 
       [data-theme="dark"] {
@@ -111,6 +112,7 @@ const GlobalStyle = createGlobalStyle`
         --vv-dark-gray-blue: hsl(237, 14%, 26%);
         --desktop-bg: url("bg-desktop-dark.jpg");
         --mobile-bg: url("bg-mobile-dark.jpg");
+        --theme-toggle-icon: url("icon-sun.svg");
       }
 
       html,
