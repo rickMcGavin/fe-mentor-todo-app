@@ -6,10 +6,11 @@ export const Header = styled.h1.attrs({
   ${({ theme }) => {
     const { media } = theme;
     return css`
+      color: var(--white);
       font-size: 1.25rem;
       letter-spacing: 10px;
 
-      ${media.medium} {
+      ${media.small} {
         font-size: 2rem;
         letter-spacing: 16px;
       }
