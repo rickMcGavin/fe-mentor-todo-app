@@ -1,5 +1,5 @@
-import Head from 'next/head';
-
+import Head from "next/head";
+import Header from "../src/components/atoms/Header";
 export default function Home() {
   return (
     <div className="app">
@@ -9,10 +9,8 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>Hello World</h1>
+        <Header />
       </main>
-
-      <footer>Created by ____</footer>
     </div>
   );
 }
