@@ -5,6 +5,7 @@ const getMediaQuery = (screenSize: number): string => {
 };
 
 const breakpoints = {
+  xs: 375,
   sm: 640,
   md: 768,
   lg: 1024,
@@ -15,6 +16,7 @@ const breakpoints = {
 export const theme: DefaultTheme = {
   breakpoints,
   media: {
+    xSmall: getMediaQuery(breakpoints.xs),
     small: getMediaQuery(breakpoints.sm),
     medium: getMediaQuery(breakpoints.md),
     large: getMediaQuery(breakpoints.lg),
