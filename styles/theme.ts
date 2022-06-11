@@ -5,7 +5,7 @@ const getMediaQuery = (screenSize: number): string => {
 };
 
 const breakpoints = {
-  xs: 375,
+  xs: 376,
   sm: 640,
   md: 768,
   lg: 1024,

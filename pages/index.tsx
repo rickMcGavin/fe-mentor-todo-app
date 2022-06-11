@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Header from "../src/components/atoms/Header";
+import Hero from "../src/components/atoms/Hero";
 export default function Home() {
   return (
     <div className="app">
@@ -9,6 +10,7 @@ export default function Home() {
       </Head>
 
       <main>
+        <Hero />
         <Header />
       </main>
     </div>

@@ -97,6 +97,8 @@ const GlobalStyle = createGlobalStyle`
         --dark-gray-blue: hsl(236, 9%, 61%);
         --v-dark-gray-blue: hsl(235, 19%, 35%);
         --white: hsl(0, 0, 100);
+        --desktop-bg: url("bg-desktop-light.jpg");
+        --mobile-bg: url("bg-mobile-light.jpg");
       }
 
       [data-theme="dark"] {
@@ -107,6 +109,8 @@ const GlobalStyle = createGlobalStyle`
         --dark-gray-blue: hsl(234, 11%, 52%);
         --v-dark-gray-blue: hsl(233, 14%, 35%);
         --vv-dark-gray-blue: hsl(237, 14%, 26%);
+        --desktop-bg: url("bg-desktop-dark.jpg");
+        --mobile-bg: url("bg-mobile-dark.jpg");
       }
 
       html,
