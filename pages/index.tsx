@@ -1,8 +1,7 @@
 import Head from "next/head";
-import Header from "../src/components/atoms/Header";
 import { Hero } from "../src/components/atoms/Hero/styles";
 import { Layout } from "../src/components/templates/Layout/styles";
-import ThemeToggle from "../src/components/atoms/ThemeToggle";
+import Nav from "../src/components/molecules/Nav";
 
 export default function Home() {
   return (
@@ -15,8 +14,7 @@ export default function Home() {
       <main>
         <Hero>
           <Layout>
-            <Header />
-            <ThemeToggle />
+            <Nav />
           </Layout>
         </Hero>
       </main>
