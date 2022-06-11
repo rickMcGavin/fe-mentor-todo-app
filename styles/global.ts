@@ -96,7 +96,7 @@ const GlobalStyle = createGlobalStyle`
         --light-gray-blue: hsl(233, 11%, 84%);
         --dark-gray-blue: hsl(236, 9%, 61%);
         --v-dark-gray-blue: hsl(235, 19%, 35%);
-        --white: hsl(0, 0, 100);
+        --white: hsl(0, 100%, 100%);
         --desktop-bg: url("bg-desktop-light.jpg");
         --mobile-bg: url("bg-mobile-light.jpg");
       }
