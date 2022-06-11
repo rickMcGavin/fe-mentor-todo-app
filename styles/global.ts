@@ -1,8 +1,7 @@
-import { createGlobalStyle, css } from 'styled-components';
+import { createGlobalStyle, css } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-  ${({ theme }) => {
-    const { colors } = theme;
+  ${() => {
     return css`
       /* BEGIN RESET */
 
@@ -87,10 +86,33 @@ const GlobalStyle = createGlobalStyle`
 
       /* END RESET */
 
+      /* Variables */
+      :root {
+        --primary: hsl(220, 98%, 61%);
+        --check-background: linear-gradient hsl(192, 100%, 67%) to
+          hsl(280, 87%, 65%);
+        --v-light-gray: hsl(0, 0%, 98%);
+        --v-light-gray-blue: hsl(236, 33%, 92%);
+        --light-gray-blue: hsl(233, 11%, 84%);
+        --dark-gray-blue: hsl(236, 9%, 61%);
+        --v-dark-gray-blue: hsl(235, 19%, 35%);
+        --white: hsl(0, 0, 100);
+      }
+
+      [data-theme="dark"] {
+        --v-dark-blue: hsl(235, 21%, 11%);
+        --v-dark-desaturated-blue: hsl(235, 24%, 19%);
+        --light-gray-blue: hsl(234, 39%, 85%);
+        --light-gray-blue-hover: hsl(236, 33%, 92%);
+        --dark-gray-blue: hsl(234, 11%, 52%);
+        --v-dark-gray-blue: hsl(233, 14%, 35%);
+        --vv-dark-gray-blue: hsl(237, 14%, 26%);
+      }
+
       html,
       body {
-        font-family: sans-serif;
-        /* add font size */
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 1.125rem;
         height: 100%;
         margin: 0;
         padding: 0;

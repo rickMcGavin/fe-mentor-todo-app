@@ -1,20 +1,9 @@
 // import original module declarations
-import 'styled-components';
-
-interface Neutral {
-  500: string;
-}
-
-interface Colors {
-  primary: string;
-  neutral: Neutral;
-  white: string;
-}
+import "styled-components";
 
 // and extend them!
-declare module 'styled-components' {
+declare module "styled-components" {
   export interface DefaultTheme {
-    colors: Colors;
     media: {
       [key: string]: string;
     };
