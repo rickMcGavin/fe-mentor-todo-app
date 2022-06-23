@@ -16,7 +16,7 @@ const Checkbox = ({ completed, id }: Props) => {
       <label htmlFor={id}>
         <input
           checked={checked}
-          onClick={() => setChecked(!checked)}
+          onChange={() => setChecked(!checked)}
           type="checkbox"
           id={id}
         />
