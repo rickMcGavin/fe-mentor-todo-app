@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const DeleteTodo = styled.div.attrs({
-  className: "deletetodo",
+  className: "delete-todo",
 })`
   svg {
     height: 16px;
