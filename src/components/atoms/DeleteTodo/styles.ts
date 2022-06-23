@@ -6,5 +6,9 @@ export const DeleteTodo = styled.div.attrs({
   svg {
     height: 16px;
     width: 16px;
+
+    path {
+      fill: var(--dark-gray-blue);
+    }
   }
 `;
