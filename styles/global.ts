@@ -89,8 +89,11 @@ const GlobalStyle = createGlobalStyle`
       /* Variables */
       :root {
         --primary: hsl(220, 98%, 61%);
-        --check-background: linear-gradient hsl(192, 100%, 67%) to
-          hsl(280, 87%, 65%);
+        --check-background: linear-gradient(
+          to right bottom,
+          hsl(192, 100%, 67%),
+          hsl(280, 87%, 65%)
+        );
         --v-light-gray: hsl(0, 0%, 98%);
         --v-light-gray-blue: hsl(236, 33%, 92%);
         --light-gray-blue: hsl(233, 11%, 84%);
