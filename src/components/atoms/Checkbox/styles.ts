@@ -37,8 +37,6 @@ export const CheckboxWrapper = styled.div`
 
     &::before {
       content: url("icon-check.svg");
-      height: ${mobileCheckDimensions};
-      width: ${mobileCheckDimensions};
       position: absolute;
       top: -6px;
       left: 5px;
@@ -46,8 +44,6 @@ export const CheckboxWrapper = styled.div`
       ${({ theme }) => {
         return css`
           ${theme.media.small} {
-            height: ${desktopCheckDimensions};
-            width: ${desktopCheckDimensions};
             top: -4px;
             left: 6px;
           }
