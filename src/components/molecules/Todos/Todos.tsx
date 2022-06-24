@@ -1,18 +1,20 @@
 import React from "react";
 import * as styles from "./styles";
 import TodoItem from "../TodoItem";
-import type { Todos as TodosType } from "../../../types/todo";
+import type { Todos as TodosType, FilterTypes } from "../../../types/todo";
 
 const Todos = ({
   todos,
   filter,
   checkTodo,
   deleteTodo,
+  setItemsLeft,
 }: {
   todos: TodosType;
-  filter: "all" | "active" | "completed";
+  filter: FilterTypes;
   checkTodo: (id: string) => void;
   deleteTodo: (id: string) => void;
+  setItemsLeft: React.Dispatch<React.SetStateAction<number>>;
 }) => {
   const allTodoKeys = Object.keys(todos);
   const completedTodoKeys = allTodoKeys.filter((key) => {
@@ -29,8 +31,10 @@ const Todos = ({
     return allTodoKeys;
   })();
 
+  setItemsLeft(Object.keys(keys).length);
+
   return (
-    <div>
+    <>
       {keys.map((key) => {
         return (
           <TodoItem
@@ -43,7 +47,7 @@ const Todos = ({
           />
         );
       })}
-    </div>
+    </>
   );
 };
 

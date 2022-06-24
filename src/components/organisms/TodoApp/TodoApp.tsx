@@ -9,6 +9,7 @@ import Filter from "../../molecules/Filter";
 const TodoApp = () => {
   const [todos, setTodos] = React.useState<TodosType>({});
   const [filter, setFilter] = React.useState<FilterTypes>("all");
+  const [itemsLeft, setItemsLeft] = React.useState(0);
 
   // TODO: abstract these function away
   const setNewTodo = (newTodo: TodosType) => {
@@ -61,15 +62,13 @@ const TodoApp = () => {
           }}
         >
           <Todos
+            setItemsLeft={setItemsLeft}
             filter={filter}
             todos={todos}
             checkTodo={checkTodo}
             deleteTodo={deleteTodo}
           />
-          <UtilityBar
-            itemsLeft={Object.keys(todos).length}
-            clearCompleted={clearCompleted}
-          />
+          <UtilityBar itemsLeft={itemsLeft} clearCompleted={clearCompleted} />
         </div>
       ) : null}
       <Filter filter={filter} setFilter={setFilter} />
