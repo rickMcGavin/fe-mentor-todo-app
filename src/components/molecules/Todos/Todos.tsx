@@ -5,14 +5,30 @@ import type { Todos as TodosType } from "../../../types/todo";
 
 const Todos = ({
   todos,
+  filter,
   checkTodo,
   deleteTodo,
 }: {
   todos: TodosType;
+  filter: "all" | "active" | "completed";
   checkTodo: (id: string) => void;
   deleteTodo: (id: string) => void;
 }) => {
-  const keys = Object.keys(todos);
+  const allTodoKeys = Object.keys(todos);
+  const completedTodoKeys = allTodoKeys.filter((key) => {
+    if (todos[key].completed) return key;
+  });
+
+  const activeTodoKeys = allTodoKeys.filter((key) => {
+    if (!todos[key].completed) return key;
+  });
+
+  const keys = (() => {
+    if (filter === "completed") return completedTodoKeys;
+    if (filter === "active") return activeTodoKeys;
+    return allTodoKeys;
+  })();
+
   return (
     <div>
       {keys.map((key) => {

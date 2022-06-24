@@ -4,9 +4,13 @@ import Todos from "../../molecules/Todos";
 import * as styles from "./styles";
 import type { Todos as TodosType, Todo } from "../../../types/todo";
 import UtilityBar from "../../molecules/UtilityBar";
+import Filter from "../../molecules/Filter";
 
 const TodoApp = () => {
   const [todos, setTodos] = React.useState<TodosType>({});
+  const [filter, setFilter] = React.useState<"all" | "active" | "completed">(
+    "all"
+  );
 
   // TODO: abstract these function away
   const setNewTodo = (newTodo: TodosType) => {
@@ -52,14 +56,25 @@ const TodoApp = () => {
     <styles.TodoApp>
       <TodoInput setNewTodo={setNewTodo} />
       {Object.keys(todos).length > 0 ? (
-        <>
-          <Todos todos={todos} checkTodo={checkTodo} deleteTodo={deleteTodo} />
+        <div
+          style={{
+            boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+            borderRadius: "4px",
+          }}
+        >
+          <Todos
+            filter={filter}
+            todos={todos}
+            checkTodo={checkTodo}
+            deleteTodo={deleteTodo}
+          />
           <UtilityBar
             itemsLeft={Object.keys(todos).length}
             clearCompleted={clearCompleted}
           />
-        </>
+        </div>
       ) : null}
+      <Filter setFilter={setFilter} />
     </styles.TodoApp>
   );
 };
