@@ -2,15 +2,13 @@ import React from "react";
 import TodoInput from "../../atoms/TodoInput";
 import Todos from "../../molecules/Todos";
 import * as styles from "./styles";
-import type { Todos as TodosType, Todo } from "../../../types/todo";
+import type { Todos as TodosType, FilterTypes } from "../../../types/todo";
 import UtilityBar from "../../molecules/UtilityBar";
 import Filter from "../../molecules/Filter";
 
 const TodoApp = () => {
   const [todos, setTodos] = React.useState<TodosType>({});
-  const [filter, setFilter] = React.useState<"all" | "active" | "completed">(
-    "all"
-  );
+  const [filter, setFilter] = React.useState<FilterTypes>("all");
 
   // TODO: abstract these function away
   const setNewTodo = (newTodo: TodosType) => {
@@ -74,7 +72,7 @@ const TodoApp = () => {
           />
         </div>
       ) : null}
-      <Filter setFilter={setFilter} />
+      <Filter filter={filter} setFilter={setFilter} />
     </styles.TodoApp>
   );
 };

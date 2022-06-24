@@ -10,10 +10,14 @@ export const Filter = styled.div.attrs({
   padding: 8px 16px;
   display: flex;
   justify-content: center;
+`;
 
-  button {
-    border: none;
-    background: none;
-    font-size: 14px;
-  }
+export const FilterButton = styled.button<{ $active: boolean }>`
+  border: none;
+  background: none;
+  color: ${({ $active }) =>
+    !$active ? " var(--dark-gray-blue)" : "var(--primary)"};
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: capitalize;
 `;

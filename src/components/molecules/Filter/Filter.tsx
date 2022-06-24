@@ -1,18 +1,26 @@
 import React from "react";
 import * as styles from "./styles";
+import type { FilterTypes } from "../../../types/todo";
 
 interface Props {
-  setFilter: React.Dispatch<
-    React.SetStateAction<"all" | "active" | "completed">
-  >;
+  filter: FilterTypes;
+  setFilter: React.Dispatch<React.SetStateAction<FilterTypes>>;
 }
 
-const Filter = ({ setFilter }: Props) => {
+const filterTypes: FilterTypes[] = ["all", "active", "completed"];
+
+const Filter = ({ filter, setFilter }: Props) => {
   return (
     <styles.Filter>
-      <button onClick={() => setFilter("all")}>All</button>
-      <button onClick={() => setFilter("active")}>Active</button>
-      <button onClick={() => setFilter("completed")}>Completed</button>
+      {filterTypes.map((filterType) => (
+        <styles.FilterButton
+          key={filterType}
+          $active={filter === filterType}
+          onClick={() => setFilter(filterType)}
+        >
+          {filterType}
+        </styles.FilterButton>
+      ))}
     </styles.Filter>
   );
 };

@@ -7,3 +7,5 @@ export interface Todo {
 export interface Todos {
   [key: string]: Todo;
 }
+
+export type FilterTypes = "all" | "active" | "completed";
