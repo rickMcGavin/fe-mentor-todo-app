@@ -6,17 +6,16 @@ import * as styles from "./styles";
 interface Props {
   completed: boolean;
   id: string;
+  checkTodo: (id: string) => void;
 }
 
-const Checkbox = ({ completed, id }: Props) => {
-  const [checked, setChecked] = React.useState(completed);
-
+const Checkbox = ({ completed, id, checkTodo }: Props) => {
   return (
     <styles.CheckboxWrapper>
       <label htmlFor={id}>
         <input
-          checked={checked}
-          onChange={() => setChecked(!checked)}
+          checked={completed}
+          onChange={() => checkTodo(id)}
           type="checkbox"
           id={id}
         />

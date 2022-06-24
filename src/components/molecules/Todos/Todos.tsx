@@ -1,20 +1,20 @@
 import React from "react";
 import * as styles from "./styles";
 import TodoItem from "../TodoItem";
+import type { Todos as TodosType } from "../../../types/todo";
 
-interface Props {
-  [key: string]: {
-    completed: boolean;
-    text: string;
-    id: string;
-    deleteTodo: () => void;
-  };
-}
-
-const Todos = ({ todos }: { todos: Props }) => {
+const Todos = ({
+  todos,
+  checkTodo,
+  deleteTodo,
+}: {
+  todos: TodosType;
+  checkTodo: (id: string) => void;
+  deleteTodo: (id: string) => void;
+}) => {
   const keys = Object.keys(todos);
   return (
-    <>
+    <div>
       {keys.map((key) => {
         return (
           <TodoItem
@@ -22,11 +22,12 @@ const Todos = ({ todos }: { todos: Props }) => {
             completed={todos[key].completed}
             text={todos[key].text}
             id={todos[key].id}
-            deleteTodo={todos[key].deleteTodo}
+            checkTodo={checkTodo}
+            deleteTodo={deleteTodo}
           />
         );
       })}
-    </>
+    </div>
   );
 };
 

@@ -3,20 +3,23 @@ import Checkbox from "../../atoms/Checkbox";
 import DeleteTodo from "../../atoms/DeleteTodo";
 import TodoText from "../../atoms/TodoText";
 import * as styles from "./styles";
+import type { Todo } from "../../../types/todo";
 
-interface Props {
-  completed: boolean;
-  id: string;
-  text: string;
-  deleteTodo: () => void;
-}
-
-const TodoItem = ({ text, id, completed, deleteTodo }: Props) => {
+const TodoItem = ({
+  text,
+  id,
+  completed,
+  checkTodo,
+  deleteTodo,
+}: Todo & {
+  checkTodo: (id: string) => void;
+  deleteTodo: (id: string) => void;
+}) => {
   return (
     <styles.TodoItem>
-      <Checkbox id={id} completed={completed} />
+      <Checkbox id={id} completed={completed} checkTodo={checkTodo} />
       <TodoText completed={completed} text={text} />
-      <DeleteTodo deleteTodo={deleteTodo} />
+      <DeleteTodo deleteTodo={() => deleteTodo(id)} />
     </styles.TodoItem>
   );
 };

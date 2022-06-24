@@ -6,9 +6,12 @@ export const TodoItem = styled.div.attrs({
   align-items: center;
   background: #ffffff;
   display: flex;
-  margin-top: 20px;
   padding: 9px 16px;
   gap: 16px;
+
+  &:first-of-type {
+    margin-top: 20px;
+  }
 
   .delete-todo {
     margin-left: auto;

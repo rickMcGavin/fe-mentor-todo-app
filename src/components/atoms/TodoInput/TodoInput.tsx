@@ -1,14 +1,23 @@
 import React, { useState } from "react";
+import generateTodo from "../../../util/generateTodo";
 import * as styles from "./styles";
+import type { Todos } from "../../../types/todo";
 
-const TodoInput = () => {
+interface Props {
+  todos: Todos;
+  setTodos: React.Dispatch<React.SetStateAction<{}>>;
+}
+
+const TodoInput = ({ todos, setTodos }: Props) => {
   const [text, setText] = useState("");
 
-  // TODO: Clean up any
-  const handleSubmit = (event: any) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // TODO: Submit this to localStorage.
-    console.log("TODO:", text);
+    const newTodo = generateTodo(text);
+    setTodos({
+      ...todos,
+      ...newTodo,
+    });
     setText("");
   };
 
