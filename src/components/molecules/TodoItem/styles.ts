@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const TodoItem = styled.div.attrs({
   className: "todo-item",
@@ -18,4 +18,12 @@ export const TodoItem = styled.div.attrs({
   .delete-todo {
     margin-left: auto;
   }
+
+  ${({ theme }) => {
+    return css`
+      ${theme.media.small} {
+        padding: 15px 16px;
+      }
+    `;
+  }}
 `;
