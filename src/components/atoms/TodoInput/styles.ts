@@ -19,8 +19,8 @@ export const TodoInput = styled.input.attrs({
     return css`
       padding: 17px 16px 17px 48px;
       ${media.small} {
-        font-size: 1.125rem;
-        line-height: 1.125;
+        font-size: 1rem;
+        line-height: 1;
       }
     `;
   }}
