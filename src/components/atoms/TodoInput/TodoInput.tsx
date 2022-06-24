@@ -1,23 +1,19 @@
 import React, { useState } from "react";
 import generateTodo from "../../../util/generateTodo";
 import * as styles from "./styles";
-import type { Todos } from "../../../types/todo";
+import type { Todos, Todo } from "../../../types/todo";
 
 interface Props {
-  todos: Todos;
-  setTodos: React.Dispatch<React.SetStateAction<{}>>;
+  setNewTodo: (newTodo: Todos) => void;
 }
 
-const TodoInput = ({ todos, setTodos }: Props) => {
+const TodoInput = ({ setNewTodo }: Props) => {
   const [text, setText] = useState("");
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const newTodo = generateTodo(text);
-    setTodos({
-      ...todos,
-      ...newTodo,
-    });
+    setNewTodo(newTodo);
     setText("");
   };
 
