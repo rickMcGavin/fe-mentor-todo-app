@@ -31,7 +31,13 @@ const Todos = ({
     return allTodoKeys;
   })();
 
-  setItemsLeft(Object.keys(keys).length);
+  const handleSetItemsLeft = React.useCallback(() => {
+    setItemsLeft(Object.keys(keys).length);
+  }, [setItemsLeft, keys]);
+
+  React.useEffect(() => {
+    handleSetItemsLeft();
+  }, [keys, handleSetItemsLeft]);
 
   return (
     <>
