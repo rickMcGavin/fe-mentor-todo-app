@@ -11,7 +11,7 @@ const filterTypes: FilterTypes[] = ["all", "active", "completed"];
 
 const Filter = ({ filter, setFilter }: Props) => {
   return (
-    <styles.Filter>
+    <>
       {filterTypes.map((filterType) => (
         <styles.FilterButton
           key={filterType}
@@ -21,7 +21,7 @@ const Filter = ({ filter, setFilter }: Props) => {
           {filterType}
         </styles.FilterButton>
       ))}
-    </styles.Filter>
+    </>
   );
 };
 

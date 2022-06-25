@@ -68,10 +68,17 @@ const TodoApp = () => {
             checkTodo={checkTodo}
             deleteTodo={deleteTodo}
           />
-          <UtilityBar itemsLeft={itemsLeft} clearCompleted={clearCompleted} />
+          <UtilityBar
+            itemsLeft={itemsLeft}
+            clearCompleted={clearCompleted}
+            filter={filter}
+            setFilter={setFilter}
+          />
         </div>
       ) : null}
-      <Filter filter={filter} setFilter={setFilter} />
+      <styles.FilterWrapper>
+        <Filter filter={filter} setFilter={setFilter} />
+      </styles.FilterWrapper>
     </styles.TodoApp>
   );
 };
