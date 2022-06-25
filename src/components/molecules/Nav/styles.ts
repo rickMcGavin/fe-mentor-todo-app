@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 export const Nav = styled.div.attrs({
   className: "nav",
 })`
+  align-items: baseline;
   display: flex;
   justify-content: space-between;
   margin-bottom: 36px;
