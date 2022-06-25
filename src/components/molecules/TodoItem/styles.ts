@@ -22,7 +22,22 @@ export const TodoItem = styled.div.attrs({
   ${({ theme }) => {
     return css`
       ${theme.media.small} {
+        min-height: 64px;
         padding: 15px 16px;
+
+        .delete-todo {
+          display: none;
+        }
+
+        &:hover {
+          .delete-todo {
+            display: block;
+          }
+        }
+
+        &:first-of-type {
+          margin-top: 24px;
+        }
       }
     `;
   }}
