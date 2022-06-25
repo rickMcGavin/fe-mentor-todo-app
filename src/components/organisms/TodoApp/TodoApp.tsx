@@ -10,6 +10,7 @@ const TodoApp = () => {
   const [todos, setTodos] = React.useState<TodosType>({});
   const [filter, setFilter] = React.useState<FilterTypes>("all");
   const [itemsLeft, setItemsLeft] = React.useState(0);
+  const allTodosCount = Object.keys(todos).length;
 
   // TODO: abstract these function away
   const setNewTodo = (newTodo: TodosType) => {
@@ -54,7 +55,7 @@ const TodoApp = () => {
   return (
     <styles.TodoApp>
       <TodoInput setNewTodo={setNewTodo} />
-      {Object.keys(todos).length > 0 ? (
+      {allTodosCount ? (
         <div
           style={{
             boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
@@ -76,9 +77,11 @@ const TodoApp = () => {
           />
         </div>
       ) : null}
-      <styles.FilterWrapper>
-        <Filter filter={filter} setFilter={setFilter} />
-      </styles.FilterWrapper>
+      {allTodosCount ? (
+        <styles.FilterWrapper>
+          <Filter filter={filter} setFilter={setFilter} />
+        </styles.FilterWrapper>
+      ) : null}
     </styles.TodoApp>
   );
 };

@@ -1,6 +1,9 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import Header from "../../atoms/Header";
-import ThemeToggle from "../../atoms/ThemeToggle";
+const ThemeToggle = dynamic(() => import("../../atoms/ThemeToggle"), {
+  ssr: false,
+});
 import * as styles from "./styles";
 
 const Nav = () => {
