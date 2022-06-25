@@ -3,15 +3,20 @@ import styled, { css } from "styled-components";
 export const TodoInput = styled.input.attrs({
   className: "todo-input",
 })`
+  background-color: var(--background);
   border-radius: 4px;
-  border: none;
-  color: var(--v-dark-gray-blue);
+  border: 0;
+  caret-color: var(--primary);
+  color: var(--text);
   font-size: 0.75rem;
   line-height: 0.75;
   width: 100%;
 
+  &:focus {
+    outline: none;
+  }
   &:placeholder {
-    color: var(--v-light-gray-blue);
+    color: var(--text);
   }
 
   ${({ theme }) => {
@@ -32,7 +37,7 @@ export const TodoWrapper = styled.div.attrs({
   position: relative;
   &::before {
     border-radius: 100%;
-    border: 1px solid var(--v-light-gray-blue);
+    border: 1px solid var(--border-color);
     content: "";
     display: block;
     height: 20px;

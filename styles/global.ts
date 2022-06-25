@@ -87,7 +87,8 @@ const GlobalStyle = createGlobalStyle`
       /* END RESET */
 
       /* Variables */
-      :root {
+      :root,
+      [data-theme="light"] {
         --primary: hsl(220, 98%, 61%);
         --check-background: linear-gradient(
           to right bottom,
@@ -100,11 +101,15 @@ const GlobalStyle = createGlobalStyle`
         --dark-gray-blue: hsl(236, 9%, 61%);
         --v-dark-gray-blue: hsl(235, 19%, 35%);
         --white: hsl(0, 100%, 100%);
+        /* Semantic Names */
+        --background: var(--white);
+        --text: var(--v-dark-gray-blue);
+        --border-color: var(--v-light-gray-blue);
+        --completed-text: var(--v-light-gray-blue);
         --desktop-bg: url("bg-desktop-light.jpg");
         --mobile-bg: url("bg-mobile-light.jpg");
         --theme-toggle-icon: url("icon-moon.svg");
       }
-
       [data-theme="dark"] {
         --v-dark-blue: hsl(235, 21%, 11%);
         --v-dark-desaturated-blue: hsl(235, 24%, 19%);
@@ -113,6 +118,12 @@ const GlobalStyle = createGlobalStyle`
         --dark-gray-blue: hsl(234, 11%, 52%);
         --v-dark-gray-blue: hsl(233, 14%, 35%);
         --vv-dark-gray-blue: hsl(237, 14%, 26%);
+        /* Semantic Names */
+        /* background: hsl(233.33,16%,11%) */
+        --background: var(--vv-dark-gray-blue);
+        --text: var(--light-gray-blue);
+        --border-color: var(--v-dark-gray-blue);
+        --completed-text: var(--v-dark-gray-blue);
         --desktop-bg: url("bg-desktop-dark.jpg");
         --mobile-bg: url("bg-mobile-dark.jpg");
         --theme-toggle-icon: url("icon-sun.svg");
@@ -120,6 +131,7 @@ const GlobalStyle = createGlobalStyle`
 
       html,
       body {
+        background-color: var(--background);
         font-family: "Josefin Sans", sans-serif;
         font-size: 1.125rem;
         height: 100%;

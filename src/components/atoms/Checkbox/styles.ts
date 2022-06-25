@@ -6,7 +6,7 @@ const desktopCheckDimensions = "24px";
 export const Checkbox = styled.div.attrs({
   className: "checkbox",
 })`
-  border: 1px solid var(--v-light-gray-blue);
+  border: 1px solid var(--border-color);
   border-radius: 100%;
   cursor: pointer;
   height: ${mobileCheckDimensions};

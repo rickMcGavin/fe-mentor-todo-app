@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export const UtilityBar = styled.div.attrs({
   className: "utility-bar",
 })`
-  background: #ffffff;
+  background: var(--background);
   display: flex;
   border-radius: 0 0 4px 4px;
   font-size: 10px;

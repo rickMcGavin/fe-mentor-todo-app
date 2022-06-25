@@ -4,8 +4,9 @@ export const TodoItem = styled.div.attrs({
   className: "todo-item",
 })`
   align-items: center;
-  background: #ffffff;
-  border-bottom: 1px solid var(--v-light-gray-blue);
+  background: var(--background);
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text);
   display: flex;
   padding: 9px 16px;
   gap: 16px;
