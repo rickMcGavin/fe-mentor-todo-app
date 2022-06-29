@@ -5,7 +5,7 @@ export const UtilityBar = styled.div.attrs({
 })`
   background: var(--background);
   display: flex;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 8px 8px;
   font-size: 10px;
   font-weight: 700;
   justify-content: space-between;

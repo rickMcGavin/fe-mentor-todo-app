@@ -106,6 +106,7 @@ const GlobalStyle = createGlobalStyle`
         --text: var(--v-dark-gray-blue);
         --border-color: var(--v-light-gray-blue);
         --completed-text: var(--v-light-gray-blue);
+        --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         --desktop-bg: url("bg-desktop-light.jpg");
         --mobile-bg: url("bg-mobile-light.jpg");
         --theme-toggle-icon: url("icon-moon.svg");
@@ -124,6 +125,7 @@ const GlobalStyle = createGlobalStyle`
         --text: var(--light-gray-blue);
         --border-color: var(--v-dark-gray-blue);
         --completed-text: var(--v-dark-gray-blue);
+        --box-shadow: rgba(20, 20, 20, 0.2) 0px 7px 29px 0px;
         --desktop-bg: url("bg-desktop-dark.jpg");
         --mobile-bg: url("bg-mobile-dark.jpg");
         --theme-toggle-icon: url("icon-sun.svg");

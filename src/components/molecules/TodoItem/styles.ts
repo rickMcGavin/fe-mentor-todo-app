@@ -7,13 +7,13 @@ export const TodoItem = styled.div.attrs({
   background: var(--background);
   border-bottom: 1px solid var(--border-color);
   color: var(--text);
+  cursor: pointer;
   display: flex;
   padding: 9px 16px;
   gap: 16px;
 
   &:first-of-type {
     border-radius: 8px 8px 0 0;
-    margin-top: 20px;
   }
 
   .delete-todo {
