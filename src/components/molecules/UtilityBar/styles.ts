@@ -25,6 +25,10 @@ export const ClearCompleted = styled.button`
   color: var(--dark-gray-blue);
   cursor: pointer;
   padding: 0;
+
+  &:hover {
+    color: var(--text-hover);
+  }
 `;
 
 export const FilterWrapper = styled.div`
