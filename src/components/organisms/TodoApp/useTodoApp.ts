@@ -5,6 +5,7 @@ import type {
   FilterTypes,
   Todo,
 } from "../../../types/todo";
+import { DEFAULT_LIST } from "../../../constants";
 
 const useTodoApp = () => {
   const [todos, setTodos] = React.useState<TodosType>({});
@@ -78,6 +79,8 @@ const useTodoApp = () => {
     const storedTodos = localStorage.getItem("myTodos") ?? "";
     if (storedTodos) {
       setTodos({ ...JSON.parse(storedTodos) });
+    } else {
+      setTodos({ ...DEFAULT_LIST });
     }
   }, []);
 

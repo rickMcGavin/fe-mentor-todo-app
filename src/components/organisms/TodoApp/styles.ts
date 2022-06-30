@@ -16,7 +16,7 @@ export const FilterWrapper = styled.div.attrs({
 })`
   ${({ theme }) => {
     return css`
-      background: var(--background);
+      background: var(--todo-background);
       border-radius: 8px;
       box-shadow: var(--box-shadow);
       margin-top: 16px;

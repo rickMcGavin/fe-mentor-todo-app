@@ -103,6 +103,7 @@ const GlobalStyle = createGlobalStyle`
         --white: hsl(0, 100%, 100%);
         /* Semantic Names */
         --background: var(--white);
+        --todo-background: var(--white);
         --text: var(--v-dark-gray-blue);
         --text-hover: hsl(231, 17%, 77%);
         --secondary-text: var(--dark-gray-blue);
@@ -123,13 +124,14 @@ const GlobalStyle = createGlobalStyle`
         --vv-dark-gray-blue: hsl(237, 14%, 26%);
         /* Semantic Names */
         /* background: hsl(233.33,16%,11%) */
-        --background: var(--vv-dark-gray-blue);
+        --todo-background: var(--v-dark-desaturated-blue);
+        --background: var(--v-dark-blue);
         --text: var(--light-gray-blue);
-        --secondary-text: var(--dark-gray-blue);
+        --secondary-text: var(--v-dark-gray-blue);
         --text-hover: var(--light-gray-blue-hover);
         --border-color: var(--v-dark-gray-blue);
         --completed-text: var(--v-dark-gray-blue);
-        --box-shadow: rgba(20, 20, 20, 0.2) 0px 7px 29px 0px;
+        --box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
         --desktop-bg: url("bg-desktop-dark.jpg");
         --mobile-bg: url("bg-mobile-dark.jpg");
         --theme-toggle-icon: url("icon-sun.svg");

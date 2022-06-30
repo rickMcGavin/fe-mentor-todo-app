@@ -15,6 +15,7 @@ const TodoItem = ({
   checkTodo,
   deleteTodo,
 }: Todo & {
+  index: number;
   isDragDisabled: boolean;
   checkTodo: (id: string) => void;
   deleteTodo: (id: string) => void;

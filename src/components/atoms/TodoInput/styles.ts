@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export const TodoInput = styled.input.attrs({
   className: "todo-input",
 })`
-  background-color: var(--background);
+  background-color: var(--todo-background);
   border-radius: 4px;
   border: 0;
   caret-color: var(--primary);

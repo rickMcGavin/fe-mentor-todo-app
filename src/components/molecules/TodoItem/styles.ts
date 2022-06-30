@@ -4,7 +4,7 @@ export const TodoItem = styled.div.attrs({
   className: "todo-item",
 })`
   align-items: center;
-  background: var(--background);
+  background: var(--todo-background);
   border-bottom: 1px solid var(--border-color);
   color: var(--text);
   display: flex;

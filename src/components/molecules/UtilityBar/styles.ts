@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export const UtilityBar = styled.div<{ $itemsLeft: number }>`
   ${({ theme, $itemsLeft }) => {
     return css`
-      background: var(--background);
+      background: var(--todo-background);
       display: flex;
       border-radius: ${$itemsLeft > 0 ? "0 0 8px 8px" : "8px"};
       font-size: 10px;

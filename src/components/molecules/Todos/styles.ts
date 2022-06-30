@@ -5,5 +5,5 @@ export const TodoList = styled.div.attrs({
 })`
   border-radius: 8px;
   margin-top: 20px;
-  background-color: var(--background);
+  background-color: var(--todo-background);
 `;

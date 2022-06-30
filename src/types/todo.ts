@@ -2,7 +2,6 @@ export interface Todo {
   completed: boolean;
   text: string;
   id: string;
-  index: number;
 }
 
 export interface Todos {
