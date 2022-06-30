@@ -104,6 +104,8 @@ const GlobalStyle = createGlobalStyle`
         /* Semantic Names */
         --background: var(--white);
         --text: var(--v-dark-gray-blue);
+        --text-hover: hsl(231, 17%, 77%);
+        --secondary-text: var(--dark-gray-blue);
         --border-color: var(--v-light-gray-blue);
         --completed-text: var(--v-light-gray-blue);
         --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -123,6 +125,8 @@ const GlobalStyle = createGlobalStyle`
         /* background: hsl(233.33,16%,11%) */
         --background: var(--vv-dark-gray-blue);
         --text: var(--light-gray-blue);
+        --secondary-text: var(--dark-gray-blue);
+        --text-hover: var(--light-gray-blue-hover);
         --border-color: var(--v-dark-gray-blue);
         --completed-text: var(--v-dark-gray-blue);
         --box-shadow: rgba(20, 20, 20, 0.2) 0px 7px 29px 0px;

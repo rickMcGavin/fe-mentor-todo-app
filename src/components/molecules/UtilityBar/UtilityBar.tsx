@@ -17,7 +17,7 @@ const UtilityBar = ({
   setFilter,
 }: Props) => {
   return (
-    <styles.UtilityBar>
+    <styles.UtilityBar $itemsLeft={itemsLeft}>
       <span>{itemsLeft} items left</span>
       <styles.FilterWrapper>
         <Filter filter={filter} setFilter={setFilter} />

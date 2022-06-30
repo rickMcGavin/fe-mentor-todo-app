@@ -34,6 +34,7 @@ const TodoApp = () => {
               todos={todos}
               checkTodo={checkTodo}
               deleteTodo={deleteTodo}
+              isDragDisabled={filter !== "all"}
             />
           </DragDropContext>
           <UtilityBar
@@ -48,6 +49,9 @@ const TodoApp = () => {
         <styles.FilterWrapper>
           <Filter filter={filter} setFilter={setFilter} />
         </styles.FilterWrapper>
+      ) : null}
+      {allTodosCount && filter === "all" ? (
+        <styles.DragDropText>Drag and drop to reorder list</styles.DragDropText>
       ) : null}
     </styles.TodoApp>
   );

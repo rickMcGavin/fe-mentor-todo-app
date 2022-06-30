@@ -6,16 +6,18 @@ import type { Todos as TodosType, FilterTypes } from "../../../types/todo";
 import { Droppable } from "react-beautiful-dnd";
 
 interface Props {
-  todos: TodosType;
+  isDragDisabled: boolean;
   filter: FilterTypes;
+  todos: TodosType;
   checkTodo: (id: string) => void;
   deleteTodo: (id: string) => void;
   setItemsLeft: React.Dispatch<React.SetStateAction<number>>;
 }
 
 const Todos = ({
-  todos,
+  isDragDisabled,
   filter,
+  todos,
   checkTodo,
   deleteTodo,
   setItemsLeft,
@@ -36,6 +38,7 @@ const Todos = ({
                 checkTodo={checkTodo}
                 deleteTodo={deleteTodo}
                 index={index}
+                isDragDisabled={isDragDisabled}
               />
             );
           })}

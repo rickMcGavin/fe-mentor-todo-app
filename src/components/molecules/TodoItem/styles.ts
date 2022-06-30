@@ -7,7 +7,6 @@ export const TodoItem = styled.div.attrs({
   background: var(--background);
   border-bottom: 1px solid var(--border-color);
   color: var(--text);
-  cursor: pointer;
   display: flex;
   padding: 9px 16px;
   gap: 16px;
@@ -34,10 +33,6 @@ export const TodoItem = styled.div.attrs({
           .delete-todo {
             display: block;
           }
-        }
-
-        &:first-of-type {
-          margin-top: 24px;
         }
       }
     `;

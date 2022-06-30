@@ -29,3 +29,18 @@ export const FilterWrapper = styled.div.attrs({
     `;
   }}
 `;
+
+export const DragDropText = styled.div`
+  color: var(--secondary-text);
+  margin-top: 50px;
+  font-size: 12px;
+  text-align: center;
+
+  ${({ theme }) => {
+    return css`
+      ${theme.media.small} {
+        font-size: 14px;
+      }
+    `;
+  }}
+`;

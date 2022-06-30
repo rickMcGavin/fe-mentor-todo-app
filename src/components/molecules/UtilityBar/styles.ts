@@ -1,19 +1,17 @@
 import styled, { css } from "styled-components";
 
-export const UtilityBar = styled.div.attrs({
-  className: "utility-bar",
-})`
-  background: var(--background);
-  display: flex;
-  border-radius: 0 0 8px 8px;
-  font-size: 10px;
-  font-weight: 700;
-  justify-content: space-between;
-  padding: 16px;
-  color: var(--dark-gray-blue);
-
-  ${({ theme }) => {
+export const UtilityBar = styled.div<{ $itemsLeft: number }>`
+  ${({ theme, $itemsLeft }) => {
     return css`
+      background: var(--background);
+      display: flex;
+      border-radius: ${$itemsLeft > 0 ? "0 0 8px 8px" : "8px"};
+      font-size: 10px;
+      font-weight: 700;
+      justify-content: space-between;
+      padding: 16px;
+      color: var(--dark-gray-blue);
+
       ${theme.media.small} {
         font-size: 13px;
       }
