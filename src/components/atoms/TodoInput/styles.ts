@@ -13,8 +13,10 @@ export const TodoInput = styled.input.attrs({
   width: 100%;
 
   &:focus {
-    outline: none;
+    outline: 3px solid var(--primary);
+    outline-offset: -2px;
   }
+
   &:placeholder {
     color: var(--text);
   }

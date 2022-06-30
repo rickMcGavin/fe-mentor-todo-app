@@ -158,6 +158,12 @@ const GlobalStyle = createGlobalStyle`
       main {
         height: 100%;
       }
+
+      button {
+        &:focus {
+          outline: 2px solid var(--primary);
+        }
+      }
     `;
   }}
 `;

@@ -11,6 +11,11 @@ export const TodoItem = styled.div.attrs({
   padding: 9px 16px;
   gap: 16px;
 
+  &:focus {
+    outline: 3px solid var(--primary);
+    outline-offset: -2px;
+  }
+
   &:first-of-type {
     border-radius: 8px 8px 0 0;
   }

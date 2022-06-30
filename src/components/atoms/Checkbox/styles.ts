@@ -13,6 +13,10 @@ export const Checkbox = styled.div.attrs({
   width: ${mobileCheckDimensions};
   z-index: 1;
 
+  &:focus {
+    outline: initial;
+  }
+
   ${({ theme }) => {
     return css`
       ${theme.media.small} {
@@ -30,6 +34,11 @@ export const CheckboxWrapper = styled.div`
     position: absolute;
     opacity: 0;
     z-index: -1;
+  }
+
+  input:focus ~ .checkbox {
+    outline: 2px solid var(--primary);
+    outline-offset: -1px;
   }
 
   input:checked ~ .checkbox {

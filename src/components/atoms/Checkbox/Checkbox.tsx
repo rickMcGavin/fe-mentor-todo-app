@@ -12,7 +12,7 @@ interface Props {
 const Checkbox = ({ completed, id, checkTodo }: Props) => {
   return (
     <styles.CheckboxWrapper>
-      <label htmlFor={id}>
+      <label htmlFor={id} aria-label="Complete task">
         <input
           checked={completed}
           onChange={() => checkTodo(id)}
